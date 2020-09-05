@@ -1,0 +1,15 @@
+.item {
+    width: 180px;
+    display: inline-block;
+}
+
+.gray {
+    background-color: #eee;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
