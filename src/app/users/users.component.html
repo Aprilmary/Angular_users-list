@@ -1,7 +1,7 @@
 <div class="line">
   <mat-form-field appearance="outline">
     <mat-label>Сортировка пользователей</mat-label>
-    <mat-select>
+    <mat-select #list (selectionChange)="sort(list.value)">
       <mat-option value="0"> от А до Я </mat-option>
       <mat-option value="1"> от Я до А </mat-option>
     </mat-select>
@@ -9,7 +9,8 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Поиск</mat-label>
-      <input matInput placeholder="Найти пользователя" value="">
+      <input matInput placeholder="Найти пользователя" #input (keyup.enter)="search(input.value)">
+      <mat-icon matSuffix (click)="search(input.value)">search</mat-icon>
     </mat-form-field>
 </div>
 
